@@ -1,0 +1,73 @@
+package UserInput;
+
+import java.util.Scanner;
+
+public class ExercitiiCitire {
+
+	public static void main(String[] args) {
+		/*
+		 * 1. Afisati la consola urmatorul text: "ce profesie iti doresti?" Introduceti
+		 * de la consola profesia doritam dupa care printati mesajul Tine-o tot asa si
+		 * in curand vei devei + valoarea citita din consola.
+		 */
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Ce profesie iti doresti? ");
+		String profesieDorita = sc.nextLine();
+		System.out.println("Tine-o tot asa si in curand vei ajunge " + profesieDorita);
+
+		/*
+		 * 2. Scrieti un parogram care afiseaza urmatorul text: "Salut! Cati ani ai?"
+		 * Introduceti in consola varsta si bagati-o intr-o variabila corespunzatoare.
+		 * Afisati la consola un text de foram "Inteleg ca ai x ani."
+		 */
+		Scanner cititor = new Scanner(System.in);
+		System.out.println("Salut! Cati ani ai?");
+		int varstaIntrodusa = cititor.nextInt();
+		System.out.println("Inteleg ca ai " + varstaIntrodusa + " ani.");
+		System.out.printf("Inteleg ca ai %d ani.", varstaIntrodusa);
+		System.out.println();
+
+		/*
+		 * 3. Scrie un program care va intreba care este sexul vostru si care cere sa
+		 * introduceti in cosola M sau F. Stocati litera intr-o varaibila
+		 * corespunzatoare, apoi afisati.
+		 */
+		Scanner cititor = new Scanner(System.in);
+		System.out.println("Introduceti sexul tau: ");
+		char sexIntrodus = cititor.next().charAt(0);
+		System.out.println("Sexul tau este: " + sexIntrodus);
+		System.out.printf("Sexul tau este: %c", sexIntrodus);
+		System.out.println();
+
+		/*
+		 * 4. Cereti de la user 3 numere. Salvati numerele citite de la consola in 3
+		 * variabile. Afisati suma, diferenta, produsul si media lor pe randuri
+		 * diferite. Folositi un singur apel al consolei.
+		 */
+		Scanner cititor = new Scanner(System.in);
+		System.out.println("Introduceti primul numar: ");
+		int n1 = cititor.nextInt();
+		System.out.println("Introduceti al doilea numar: ");
+		int n2 = cititor.nextInt();
+		System.out.println("Introduceti al treilea numar: ");
+		int n3 = cititor.nextInt();
+		int suma = n1 + n2 + n3;
+		int dif = n1 - n2 - n3;
+		int medie = suma / 3;
+		System.out.printf(" Suma numerelor este: %d  \n Diferenta numerelor este: %d \n Media numerelor este: %d", suma,
+				dif, medie);
+		System.out.println();
+		
+		/*
+		 * 5. Scrieti un program care cere o temperatura in grade Celsiul si o
+		 * transforma in grade Fahrenheit.
+		 * 
+		 */
+		Scanner cititor = new Scanner(System.in);
+		System.out.println("Introduceti temperatura in grade Celsius: ");
+		int gradeCelsius = cititor.nextInt();
+		int gradeFahrenheit = gradeCelsius * (9 / 5) + 32;
+		System.out.println("Temperatura in Fharenheit este: " + gradeFahrenheit);
+	}
+
+}
